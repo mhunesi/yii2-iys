@@ -1,0 +1,22 @@
+{
+    "name": "mhunesi/yii2-iys",
+    "description": "Yii2 İYS Service Component",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","iys","ileti","yonetim","sistemi"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mustafa Hayri ÜNEŞİ",
+            "email": "mhunesi@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "mhunesi\\iys\\": "src"
+        }
+    }
+}
