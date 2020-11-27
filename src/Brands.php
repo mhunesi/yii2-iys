@@ -14,6 +14,7 @@ namespace mhunesi\iys;
 
 
 use yii\base\BaseObject;
+use yii\base\InvalidConfigException;
 use yii\helpers\Json;
 
 class Brands extends BaseObject
@@ -45,6 +46,7 @@ class Brands extends BaseObject
     /**
      * https://dev.iys.org.tr/api-metotlar/marka-yonetimi/isortagi-listeleme/
      * @return bool|mixed
+     * @throws InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function allIntegratorBrands()
@@ -64,6 +66,7 @@ class Brands extends BaseObject
      * https://dev.iys.org.tr/api-metotlar/marka-yonetimi/isortagi-sorgulama/
      * @param $iysCode
      * @return bool|mixed
+     * @throws InvalidConfigException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function oneIntegratorBrand($iysCode)

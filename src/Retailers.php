@@ -44,7 +44,9 @@ class Retailers extends BaseObject
     {
         $endPoint = "/sps/{$this->api->iys_code}/brands/{$this->api->brand_code}/retailers";
 
-        $response = $this->api->request('POST', $endPoint, $retailer);
+        $response = $this->api->request('POST', $endPoint, [
+            'body' => Json::encode($retailer)
+        ]);
 
         return Json::decode($response->getBody());
     }

@@ -42,7 +42,9 @@ class Consents extends BaseObject
     {
         $endPoint = "/sps/{$this->api->iys_code}/brands/{$this->api->brand_code}/consents";
 
-        $response = $this->api->request('POST', $endPoint, $consents);
+        $response = $this->api->request('POST', $endPoint, [
+            'body' => Json::encode($consents)
+        ]);
 
         $responseString = Message::toString($response);
 
@@ -67,7 +69,9 @@ class Consents extends BaseObject
 
         $endPoint = "/sps/{$this->api->iys_code}/brands/{$this->api->brand_code}/consents/request";
 
-        $response = $this->api->request('POST', $endPoint, $consents);
+        $response = $this->api->request('POST', $endPoint,[
+            'body' => Json::encode($consents)
+        ]);
 
         $responseString = Message::toString($response);
 
@@ -88,7 +92,9 @@ class Consents extends BaseObject
     {
         $endPoint = "/sps/{$this->api->iys_code}/brands/{$this->api->brand_code}/status";
 
-        $response = $this->api->request('POST', $endPoint, $data);
+        $response = $this->api->request('POST', $endPoint, [
+            'body' => Json::encode($data)
+        ]);
 
         return Json::decode($response->getBody());
     }
@@ -142,7 +148,9 @@ class Consents extends BaseObject
     {
         $endPoint = "/sps/{$this->api->iys_code}/brands/{$this->api->brand_code}/consents/overIys";
 
-        $response = $this->api->request('POST', $endPoint, $consents);
+        $response = $this->api->request('POST', $endPoint, [
+            'body' => Json::encode($consents)
+        ]);
 
         return Json::decode($response->getBody());
     }
@@ -160,7 +168,9 @@ class Consents extends BaseObject
     {
         $endPoint = "/sps/{$this->api->iys_code}/brands/{$this->api->brand_code}/consents/verificationCode";
 
-        $response = $this->api->request('POST', $endPoint, $data);
+        $response = $this->api->request('POST', $endPoint, [
+            'body' => Json::encode($data)
+        ]);
 
         return Json::decode($response->getBody());
     }
