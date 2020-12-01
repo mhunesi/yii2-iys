@@ -12,11 +12,12 @@
 
 namespace mhunesi\iys;
 
-use Doctrine\Instantiator\Exception\InvalidArgumentException;
-use GuzzleHttp\Psr7\Message;
+
 use Yii;
-use yii\base\BaseObject;
 use yii\helpers\Json;
+use yii\base\BaseObject;
+use GuzzleHttp\Psr7\Message;
+use yii\base\InvalidConfigException;
 
 class Consents extends BaseObject
 {
